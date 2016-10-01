@@ -1,10 +1,12 @@
 <template>
-<div v-show="show" :class="classes" transition="fade" v-bind:style="{width:width}" role="alert">
-    <button v-show="dismissable" type="button" class="close" @click="toggle">
-        <span>&times;</span>
-    </button>
-    <slot></slot>
-</div>
+    <transition name="fade">
+        <div v-show="show" :class="classes" v-bind:style="{width:width}" role="alert">
+            <button v-show="dismissable" type="button" class="close" @click="toggle">
+                <span>&times;</span>
+            </button>
+            <slot></slot>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -60,11 +62,12 @@ export default {
 }
 </script>
 <style>
-.fade-transition {
+.fade-enter-active,
+.fade-leave-active {
     transition: opacity .3s ease;
 }
 .fade-enter,
-.fade-leave {
+.fade-leave-active {
     height: 0;
     opacity: 0;
 }

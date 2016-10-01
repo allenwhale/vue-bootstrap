@@ -2,7 +2,7 @@
   "name": "vue-bootstrap",
   "version": "0.0.1",
   "description": "Bootstrap for vue 2.0",
-  "main": "index.js",
+  "main": "dist/vue-bootstrap.js",
   "scripts": {
     "build": "webpack --progress --hide-modules --config  webpack.build.js",
     "build-min": "webpack --progress --hide-modules --config  webpack.build.min.js"

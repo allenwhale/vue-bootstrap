@@ -1,7 +1,9 @@
 import $ from './utils/NodeList'
+import Alert from './Alert.vue'
 
-const VueStrap = {
-    $
+const VueBootStrap = {
+    $,
+    Alert
 }
 
-module.exports = VueStrap
+module.exports = VueBootstrap

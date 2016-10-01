@@ -1,7 +1,8 @@
 <template>
 <div v-show="show" :class="classes" transition="fade" v-bind:style="{width:width}" role="alert">
-    <button v-show="dismissable" type="button" class="close" @click="toggle"></button>
-    <span>&times;</span>
+    <button v-show="dismissable" type="button" class="close" @click="toggle">
+        <span>&times;</span>
+    </button>
     <slot></slot>
 </div>
 </template>

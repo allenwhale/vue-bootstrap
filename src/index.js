@@ -1,9 +1,11 @@
 import $ from './utils/NodeList'
 import Alert from './Alert.vue'
+import Panel from './Panel.vue'
 
 const VueBootstrap = {
     $,
-    Alert
+    Alert,
+    Panel
 }
 
 module.exports = VueBootstrap

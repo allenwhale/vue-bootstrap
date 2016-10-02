@@ -41,7 +41,7 @@ export default {
             default: 0
         },
         width: {
-            type: Number
+            type: String
         },
         placement: {
             type: String

@@ -1,3 +1,4 @@
+<!--
 <template>
     <transition name="fade">
         <div v-show="show" :class="classes" v-bind:style="{width:width}" role="alert">
@@ -8,9 +9,21 @@
         </div>
     </transition>
 </template>
-
+-->
 <script>
 export default {
+    render (h) {
+        return (
+            <transition name="fade">
+                <div v-show={this.show} class={this.classes} style={{width: this.width}} role='alert'>
+                    <button v-show={this.dismissable} type='button' class='close' on-click={this.toggle}>
+                        <span>&times;</span>
+                    </button>
+                    {this.$slots.default}
+                </div>
+            </transition>
+        )
+    },
     props: {
         type: {
             type: String
@@ -68,7 +81,6 @@ export default {
 }
 .fade-enter,
 .fade-leave-active {
-    height: 0;
     opacity: 0;
 }
 .alert.top {
